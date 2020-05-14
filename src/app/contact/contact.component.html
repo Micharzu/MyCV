@@ -1,0 +1,29 @@
+<div class="contact_window">
+    <div class="contact_title">
+        <h2>KONTAKT</h2>
+    </div>
+
+    <form class="contact_form">
+
+        <textarea id="contact_content" class="form-control contact_input"></textarea>
+
+        <div style="padding-top: 2vh;"></div>
+
+        <div class="contact_flex">
+
+
+            <label for="contact_username" class="contact_label contact_username">PODPIS</label>
+            <input type="text" id="contact_name" class="form-control contact_input contact_username">
+
+            <label for="contact_user_mail" class="contact_label contact_user_mail">ADRES ZWROTNY</label>
+            <input type="email" id="contact_email" class="form-control contact_input contact_user_mail">
+
+            <button class="btn contact_button" (click)="onSendForm()" type="button">WYŚLIJ</button>
+
+
+        </div>
+        
+        
+    </form>
+
+</div>

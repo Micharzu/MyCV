@@ -1,0 +1,17 @@
+.footer{
+    display: flex;
+    min-height: 20px;
+    position: relative;
+    width: 100vw;
+
+}
+
+.footer_bar{
+    width: 50%;
+    padding: 2vh 3vh 2vh 3vh;
+    background-color: black;
+}
+
+.footer_icon{
+    color: white;
+}

@@ -1,0 +1,16 @@
+h1{
+    display: block;
+    font-family: Arial;
+    font-size: 2.9vw;
+    letter-spacing: 0.4em;
+    color: #e9c80d;
+}
+
+h2{
+    display: block;
+    font-family: 'Segoe UI';
+    font-size: 2.3vw;
+    letter-spacing: 0.1em;
+    color: #e3e2e1;
+    font-weight: bold;
+}
