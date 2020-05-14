@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: 'FederationBold';
+    src: url(./assets/fonts/FederationBold/F_BOLD.TTF) format("truetype");
+}
+
+@font-face{
+    font-family: 'Agency FB Bold Condensed';
+    src: url(./assets/fonts/AgencyFBBoldCondensed/agencyfb-boldcondensed.ttf) format("truetype");
+}
+
+@font-face{
+    font-family: 'Typoline Expanded Regular';
+    src: url(./assets/fonts/Typoline-Expanded-Regular/typoline-expanded-regular.ttf) format("truetype");
+}
+
+
+body{
+    background: linear-gradient(to bottom, #323232, #481e53);
+}
+
+
+.is-visible{
+    color: springgreen;
+    transition: ease;
+    transition-delay: 1s;
+    transition-duration: 3s;
+}

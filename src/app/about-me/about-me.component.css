@@ -1,0 +1,39 @@
+.about-me_bg{
+    background-color: #d2d2d2;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-right: 100vw;
+    position: absolute;
+    left: 0px;
+}
+
+.photo{
+
+    position: absolute;
+    top: 0;
+    right: 65vw;
+    
+}
+
+.text_fields{
+    display: block;
+    position: relative;
+    color: rgb(36, 36, 36);
+    text-align: center;
+    ;
+}
+
+#about-me-header{
+    display: block;
+    position: relative;
+    font-size: 3.5vw;
+    top: 10vh;
+}
+
+#about-me-content{
+    display: block;
+    position: relative;
+    font-size: 2.8vw;
+    top: 15vh;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
