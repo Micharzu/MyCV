@@ -1,10 +1,7 @@
-.about-me_bg{
+.about-me{
     background-color: #d2d2d2;
-    padding-top: 20%;
-    padding-bottom: 20%;
-    padding-right: 100vw;
-    position: absolute;
-    left: 0px;
+    height: 35vw;
+    position: relative;
 }
 
 .photo{
@@ -16,24 +13,26 @@
 }
 
 .text_fields{
-    display: block;
     position: relative;
+    left: 40vw;
+    width: 55%;
+    padding-top: 6%;
+
+
     color: rgb(36, 36, 36);
     text-align: center;
-    ;
 }
 
 #about-me-header{
-    display: block;
     position: relative;
-    font-size: 3.5vw;
-    top: 10vh;
+    display: block;
+    font-size: 3.1vw;
 }
 
 #about-me-content{
-    display: block;
     position: relative;
-    font-size: 2.8vw;
-    top: 15vh;
+    display: block;
+    font-size: 2.4vw;
+    top: 5vh;
     font-family: 'Arial Narrow', Arial, sans-serif;
 }

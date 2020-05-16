@@ -2,6 +2,8 @@
     position: relative;
     justify-content: center;
     min-width: 250px;
+
+    background-color: rgba(0, 0, 0, 0.55);
 }
 
 /* .skills::before{
@@ -22,9 +24,13 @@
     text-align: center;
     color: white;
     padding: 2vh;
+
+    background-color: black; 
+    border-top: 0.6vh solid #e9c80d;
+    border-bottom: 2px solid #e9c80d;
 }
 
-.skill_title::before{
+/* .skill_title::before{
     content: '';
     display: block;
     position: absolute;
@@ -35,20 +41,19 @@
     left: 50%;
     transform: translateX(-50%);
 
-     background-color: black; 
+    background-color: black; 
     border-top: 0.6vh solid #e9c80d;
     border-bottom: 2px solid #e9c80d;
-}
+} */
 
 
 .skill_list{
     position: relative;
     display: flex;
-    height: 25vw;
+    height: 22vw;
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    /* overflow: hidden; */
 }
 
 svg{
