@@ -29,6 +29,10 @@ export class NavbarComponent implements OnInit {
     document.getElementById("contact-section").scrollIntoView({behavior: "smooth"});
   }
 
+  toSubmissions(){
+    document.getElementById("submissions-section").scrollIntoView({behavior: "smooth"});
+  }
+
   ngOnInit(){
   }
 }
