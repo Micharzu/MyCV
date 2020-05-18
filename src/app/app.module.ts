@@ -11,6 +11,9 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
 import { HobbyListComponent } from './hobbies/hobby-list/hobby-list.component';
+import { SubmissionsComponent } from './submissions/submissions.component';
+import { SubmissionListComponent } from './submissions/submission-list/submission-list.component';
+import { SubmissionFormComponent } from './submissions/submission-form/submission-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { HobbyListComponent } from './hobbies/hobby-list/hobby-list.component';
     FooterComponent,
     ContactComponent,
     HobbiesComponent,
-    HobbyListComponent
+    HobbyListComponent,
+    SubmissionsComponent,
+    SubmissionListComponent,
+    SubmissionFormComponent
   ],
   imports: [
     BrowserModule

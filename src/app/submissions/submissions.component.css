@@ -1,0 +1,13 @@
+.submissions{
+    width: 100%;
+}
+.submissions_top{
+    background-color: black;
+    height: 3vh;
+    max-height: 20px;
+    min-height: 10px;
+}
+
+.submissions_content{
+    background-color: rgb(233, 220, 107);
+}

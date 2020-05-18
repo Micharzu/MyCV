@@ -1,0 +1,65 @@
+.submission_form_header{
+    text-align: center;
+    padding: 7%;
+    background-color: rgb(230, 219, 124);
+    border: 3px solid rgba(44, 44, 44, 0.05) ;
+    margin-top: 7%;
+}
+
+
+.submission_form_window{
+    margin: 5% 0 7% 0;
+    padding: 10px;
+    background-color: rgba(235, 235, 235);
+    border: 3px solid rgba(44, 44, 44, 0.2) ;
+    border-radius: 8px;
+
+}
+
+.submission_form{
+    padding: 10px;
+}
+
+.submission_form_input{
+    background-color: rgba(44, 44, 44, 0.15);
+}
+
+.submission_form_name{
+    margin: 2%;
+}
+
+.submission_form_content{
+    margin: 2%;
+    margin: 15px 0 15px 0;
+
+}
+
+.submission_label{
+    color: rgb(58, 58, 58);
+    font-weight: 600;
+}
+
+#submission_content{
+    min-height: 10vh;
+}
+
+.submission_button_div{
+    width: 96%;
+    margin: 2%;
+}
+
+.submission_button{
+    width: 100%;
+    color: white;
+    font-weight: 800;
+    background-color: rgba(27, 27, 27);
+    border: 3px solid rgba(27, 27, 27);
+}
+
+.submission_button:hover{
+    border: 3px solid rgb(248, 234, 43);
+    color: rgb(248, 234, 43);
+
+    transition: 0.3s;
+
+}
