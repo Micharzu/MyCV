@@ -1,16 +1,24 @@
 <div class="hobby-list">
-    <a *ngFor="let hobby of hobbies">
+    <a *ngFor="let hobby of hobbies; let i = index">
     <div class="hobby_item">
-
+        
         <div class="hobby_card">
+
+            <div *ngIf="i!=4; then thenBlock else elseBlock"></div>
+
+            <ng-template #thenBlock>
+
+                <div class="hobby_item_name">
+                    <h3>{{hobby.name}}</h3>  
+                </div>
+            </ng-template>
+
+            <ng-template #elseBlock>
+                <div class="hobby_item_gif">
+                    <img class="img-responsive the_gif" [src]="hobby.gifPath" alt="{{hobby.name}}">
+                </div>
+            </ng-template>
         
-            <div class="hobby_item_name">
-                <h3>{{hobby.name}}</h3>  
-            </div>
-        
-            <div class="hobby_item_gif">
-                <img class="img-responsive the_gif" [src]="hobby.gifPath" alt="{{hobby.name}}">
-            </div>
         </div>
     </div>
     </a>
