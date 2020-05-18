@@ -1,0 +1,57 @@
+.hobby-list{
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.hobby_item{
+    position: relative;
+    height: 40vh;
+    width: 40vh;
+    margin: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    perspective: 1000px;
+  }
+  
+  .hobby_card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    text-align: center;
+    transition: 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .hobby_item:hover .hobby_card {
+    transform: rotateY(180deg);
+  }
+  
+  .hobby_item_name .hobby_item_gif{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .hobby_item_name{
+    background-color: #e9c80d80;
+    color: rgb(218, 217, 183);
+  }
+  
+  .hobby_item_gif {
+    background-color: #e9c80d;
+    transform: rotateY(180deg);
+  }
+
+  .the_gif{
+      height: 100%;
+      width: 100%;
+  }

@@ -1,0 +1,17 @@
+<div class="hobby-list">
+    <a *ngFor="let hobby of hobbies">
+    <div class="hobby_item">
+
+        <div class="hobby_card">
+        
+            <div class="hobby_item_name">
+                <h3>{{hobby.name}}</h3>  
+            </div>
+        
+            <div class="hobby_item_gif">
+                <img class="img-responsive the_gif" [src]="hobby.gifPath" alt="{{hobby.name}}">
+            </div>
+        </div>
+    </div>
+    </a>
+</div>
