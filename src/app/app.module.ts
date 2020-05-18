@@ -9,6 +9,8 @@ import { SpamComponent } from './spam/spam.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { HobbiesComponent } from './hobbies/hobbies.component';
+import { HobbyListComponent } from './hobbies/hobby-list/hobby-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ContactComponent } from './contact/contact.component';
     SpamComponent,
     SkillsComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    HobbiesComponent,
+    HobbyListComponent
   ],
   imports: [
     BrowserModule
