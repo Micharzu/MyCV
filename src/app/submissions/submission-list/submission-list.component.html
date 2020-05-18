@@ -1,0 +1,9 @@
+<div class="submission_list">
+
+    <div *ngFor="let submission of submissions.slice().reverse(); let i = index">
+        <div class="single_submission" *ngIf="i<3">
+            <h4>{{submission.name}}</h4>
+            <p>{{submission.content}}</p>
+        </div>
+    </div>
+</div>

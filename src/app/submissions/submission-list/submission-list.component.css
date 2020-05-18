@@ -1,0 +1,11 @@
+.submission_list{
+    padding: 10px;
+}
+
+.single_submission{
+    margin: 2vh;
+    padding: 20px;
+    background-color: rgba(235, 235, 235, 0.45);
+    border: 3px solid rgba(44, 44, 44, 0.08) ;
+    border-radius: 15px;
+}
