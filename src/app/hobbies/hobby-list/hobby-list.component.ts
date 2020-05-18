@@ -13,7 +13,8 @@ export class HobbyListComponent implements OnInit {
     new Hobby('HOBBY_3', 'https://i.gifer.com/74SX.gif'),
     new Hobby('HOBBY_4', 'https://i.gifer.com/74SX.gif'),
     new Hobby('HOBBY_5', 'https://i.gifer.com/74SX.gif'),
-    new Hobby('HOBBY_6', 'https://i.gifer.com/74SX.gif')
+    new Hobby('HOBBY_6', 'https://i.gifer.com/74SX.gif'),
+    new Hobby('HOBBY_7', 'https://i.gifer.com/74SX.gif')
   ];
 
   constructor() { }

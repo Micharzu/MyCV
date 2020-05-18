@@ -21,6 +21,10 @@ export class NavbarComponent implements OnInit {
     document.getElementById("skills-section").scrollIntoView({behavior: "smooth"});
   }
 
+  toHobbies(){
+    document.getElementById("hobbies-section").scrollIntoView({behavior: "smooth"});
+  }
+
   toContact(){
     document.getElementById("contact-section").scrollIntoView({behavior: "smooth"});
   }
