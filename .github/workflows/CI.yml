@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Check if file exists
 on:
   push:
     branches: [ master ]
@@ -7,6 +7,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+<<<<<<< HEAD
   # This workflow contains a single job called "build"
   build:
     name: Build
@@ -26,8 +27,10 @@ jobs:
           name: dist
           path: dist
   deploy:
+=======
+  ckeck:
+>>>>>>> Update CI test
     name: Deploy
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: ReadmeCheck
