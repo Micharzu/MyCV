@@ -1,37 +1,37 @@
 name: Check if file exists
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-<<<<<<< HEAD
-  # This workflow contains a single job called "build"
   build:
     name: Build
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm run build --prod
+        run: npm run build
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
           name: dist
           path: dist
   deploy:
-=======
-  ckeck:
->>>>>>> Update CI test
     name: Deploy
+    needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: ReadmeCheck
-        run: '(test -f README && echo README exists) || echo README does not exist, skipping step'
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: dist
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
