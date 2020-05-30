@@ -22,6 +22,12 @@
 
 .submission_form_input{
     background-color: rgba(44, 44, 44, 0.15);
+    border-width: 0.1rem;
+}
+
+.submission_form_input:focus{
+    border-color: rgba(190, 123, 221, 0.8);
+    box-shadow: 0 0 0 0.2rem rgba(184, 58, 241, 0.25);
 }
 
 .submission_form_name{
@@ -29,8 +35,7 @@
 }
 
 .submission_form_content{
-    margin: 2%;
-    margin: 15px 0 15px 0;
+    margin: 15px 2% 15px 2%;
 
 }
 
@@ -52,14 +57,22 @@
     width: 100%;
     color: white;
     font-weight: 800;
-    background-color: rgba(27, 27, 27);
-    border: 3px solid rgba(27, 27, 27);
+    background-color: rgb(27, 27, 27);
+    border: unset;
 }
 
 .submission_button:hover{
-    border: 3px solid rgb(248, 234, 43);
-    color: rgb(248, 234, 43);
-
+    border: unset;
     transition: 0.3s;
+}
 
+.submission_button:focus{
+    box-shadow: unset;
+    animation: flash 1s;
+}
+
+@keyframes flash{
+    0%   {background-color: rgb(27, 27, 27);}
+    30%  {background-color: rgb(132, 61, 165);}
+    100%  {background-color: rgb(27, 27, 27);}
 }

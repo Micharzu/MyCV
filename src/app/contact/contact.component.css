@@ -90,3 +90,7 @@
 .contact_button:hover{
     background-color: #e9c80d;
 }
+
+.contact_button:focus{
+    box-shadow: unset;
+}
