@@ -7,6 +7,7 @@ import { Component, OnInit, AfterContentInit, HostListener} from '@angular/core'
 })
 export class AppComponent implements OnInit, AfterContentInit{
   title = 'MyCV';
+  aboutSectionWasShown = false;
 
   elementsToShow = document.querySelectorAll('.appear-on-scroll');
 
@@ -16,6 +17,13 @@ export class AppComponent implements OnInit, AfterContentInit{
       this.elementsToShow.forEach(el => {
         if(this.isElementInViewport(el)){
           el.classList.add('is-visible');
+          if(!this.aboutSectionWasShown && el.classList.contains("is-visible")){
+            console.log(el.id);
+            this.aboutSectionWasShown = true;
+            
+          }
+
+          // if(!this.aboutSectionWasShown&&)
         }
         // else{
         //   element.classList.remove('is-visible');
@@ -36,6 +44,8 @@ export class AppComponent implements OnInit, AfterContentInit{
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
     );
   }
+
+  
 
   ngOnInit(){
 

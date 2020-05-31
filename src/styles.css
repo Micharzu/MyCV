@@ -17,11 +17,3 @@
 body{
     background: linear-gradient(to bottom, #323232, #481e53);
 }
-
-
-.is-visible{
-    color: springgreen;
-    transition: ease;
-    transition-delay: 1s;
-    transition-duration: 3s;
-}
