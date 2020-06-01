@@ -10,7 +10,7 @@
 .submission_form_window{
     margin: 5% 0 7% 0;
     padding: 10px;
-    background-color: rgba(235, 235, 235);
+    background-color: rgb(212, 159, 252);
     border: 3px solid rgba(44, 44, 44, 0.2) ;
     border-radius: 8px;
 
@@ -22,12 +22,15 @@
 
 .submission_form_input{
     background-color: rgba(44, 44, 44, 0.15);
-    border-width: 0.1rem;
+    border-width: 0.15rem;
+    border-color: rgba(44, 44, 44, 0.15);
+    font-weight: 600;
 }
 
 .submission_form_input:focus{
-    border-color: rgba(190, 123, 221, 0.8);
-    box-shadow: 0 0 0 0.2rem rgba(184, 58, 241, 0.25);
+    border-color: rgba(242, 215, 255, 0.8);
+    box-shadow: 0 0 0 0.2rem rgba(242, 215, 255, 0.2);
+    color: rgb(242, 215, 255);
 }
 
 .submission_form_name{
@@ -41,7 +44,8 @@
 
 .submission_label{
     color: rgb(58, 58, 58);
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
 #submission_content{
