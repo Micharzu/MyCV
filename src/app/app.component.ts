@@ -1,58 +1,43 @@
-import { Component, OnInit, AfterContentInit, HostListener} from '@angular/core';
+import { Component, OnInit, AfterContentInit, HostListener, OnDestroy} from '@angular/core';
+import { ShowComponentService } from './show-component.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, AfterContentInit{
+export class AppComponent implements OnInit, AfterContentInit, OnDestroy{
   title = 'MyCV';
-  aboutSectionWasShown = false;
+  aboutSectionWasShown: boolean;
+  private aboutMeSectionSubscription: Subscription;
 
-  elementsToShow = document.querySelectorAll('.appear-on-scroll');
+  constructor(private showCompService: ShowComponentService){}
+  appearClass = '.appear-if-in-viewport';
+
+  elementsToShow = document.querySelectorAll(this.appearClass);
 
   @HostListener("document:scroll") onScroll(){
     if(document.documentElement.scrollTop > 0){
-
-      this.elementsToShow.forEach(el => {
-        if(this.isElementInViewport(el)){
-          el.classList.add('is-visible');
-          if(!this.aboutSectionWasShown && el.classList.contains("is-visible")){
-            console.log(el.id);
-            this.aboutSectionWasShown = true;
-            
-          }
-
-          // if(!this.aboutSectionWasShown&&)
-        }
-        // else{
-        //   element.classList.remove('is-visible');
-        // }
-      });
+      this.showCompService.manageComponentsVisibility(this.elementsToShow);
     }
-  }
-
-  isElementInViewport(el){
-    var rect = el.getBoundingClientRect();
-    return(
-      (rect.top <=0 && rect.bottom >=0)
-      ||
-      (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight)&&
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
-      ||
-      (rect.top >=0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
-    );
   }
 
   
 
-  ngOnInit(){
+  
 
+  ngOnInit(){
+    this.aboutMeSectionSubscription = this.showCompService.showAboutMeState
+    .subscribe(state => this.aboutSectionWasShown = state);
   }
 
   ngAfterContentInit(){
-    this.elementsToShow = document.querySelectorAll('.appear-on-scroll');
+    this.elementsToShow = document.querySelectorAll(this.appearClass);
+  }
+
+  ngOnDestroy(){
+    this.aboutMeSectionSubscription.unsubscribe();
   }
   
 }
