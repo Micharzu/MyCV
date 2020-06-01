@@ -15,7 +15,7 @@
 }
 
 .is-visible.about-me-component{
-    animation: rise 5s forwards;
+    animation: rise 3s forwards;
 }
 
 @keyframes rise{

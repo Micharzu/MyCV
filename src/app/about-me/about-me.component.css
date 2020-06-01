@@ -23,16 +23,40 @@
     text-align: center;
 }
 
-#about-me-header{
+.about-me-header{
     position: relative;
+    opacity: 0;
     display: block;
     font-size: 3.1vw;
 }
 
-#about-me-content{
+.about-me-content{
     position: relative;
+    opacity: 0;
     display: block;
     font-size: 2.4vw;
     top: 5vh;
     font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.is-visible{
+    animation-name: from_underneath_header;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.about-me-content.is-visible{
+    animation-name: from_underneath;
+    animation-delay: 4s;
+}
+
+@keyframes from_underneath_header{
+    0%   {top:1vh;}
+    100% {opacity: 1; top:0;}
+}
+
+@keyframes from_underneath{
+    0%   {top:6vh;}
+    100% {opacity: 1; top:5vh;}
 }
