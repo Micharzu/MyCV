@@ -5,98 +5,53 @@
     justify-content: center;
 }
 
-/* .hobby_item{
-    position: relative;
-    height: 40vh;
-    width: 40vh;
-    margin: 2px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: transparent;
-    perspective: 1000px;
-  }
-  
-  .hobby_card{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    
-    text-align: center;
-    transition: 0.8s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
-  
-  .hobby_item:hover .hobby_card {
-    transform: rotateY(180deg);
-  }
-  
-  .hobby_item_name .hobby_item_gif{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  
-  .hobby_item_name{
-    background-color: #e9c80d80;
-    color: rgb(218, 217, 183);
-  }
-  
-  .hobby_item_gif {
-    background-color: #e9c80d;
-    transform: rotateY(180deg);
-  }
-
-  .the_gif{
-      height: 100%;
-      width: 100%;
-  } */
-
-
   .hobby_item{
     position: relative;
-    height: 40vh;
-    width: 40vh;
-    margin: 2px;
+    height: 30vh;
+    width: 30vh;
+    margin: 5px;
 
     background-color: transparent;
+    perspective: 1500px;
   }
   
   .hobby_card{
     position: relative;
     width: 100%;
     height: 100%;
-    
+
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+  }
+
+  .hobby_item:hover .hobby_card{
+    transform: rotateY(180deg);
+    transition-delay: 0.3s;
+  }
+
+  .hobby_card_front, .hobby_card_back{
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.75;
-  }
-  
-  .hobby_item_name{
 
+
+    position: absolute;
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
 
-    background-color: #c9af1e;
-    color: rgb(218, 217, 183);
+  .hobby_card_front{
+    background-color: rgb(137, 126, 111);
+    color: #e2c521;
+  }
+
+  .hobby_card_back{
+    transform: rotateY(180deg);
   }
 
   .the_gif{
-      height: 100%;
-      width: 100%;
-  }
-
-  .hobby_card:hover, .hobby_item_name:hover{
-      
-      opacity: 1;
-      background-color: #d3ba2b;
-      transition: 0.25s ease-in-out;
+    height: 100%;
+    width: 100%;
   }
