@@ -9,13 +9,19 @@ import { Subscription } from 'rxjs';
 })
 export class AboutMeComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
-  state: boolean;
+  rootElement: Element;
 
   constructor(private showCompService: ShowComponentService) { }
 
   ngOnInit() {
-    this.subscription = this.showCompService.showAboutMeState.subscribe(state =>{
-      this.state = state;
+    this.rootElement = document.getElementsByClassName('about-me')[0];
+
+    this.subscription = this.showCompService.aboutMeState.subscribe(state =>{
+      if(state){
+        this.rootElement.classList.add('is-visible');
+      } else{
+        this.rootElement.classList.remove('is-visible');
+      }
     });
   }
 

@@ -14,7 +14,7 @@
     opacity: 0;
 }
 
-.is-visible.about-me-component{
+.is-visible .about-me-component{
     animation: rise 3s forwards;
 }
 

@@ -39,16 +39,18 @@
     font-family: 'Arial Narrow', Arial, sans-serif;
 }
 
-.is-visible{
+.is-visible .about-me-header{
     animation-name: from_underneath_header;
     animation-duration: 0.5s;
     animation-delay: 3s;
     animation-fill-mode: forwards;
 }
 
-.about-me-content.is-visible{
+.is-visible .about-me-content{
     animation-name: from_underneath;
     animation-delay: 4s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes from_underneath_header{
