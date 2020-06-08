@@ -20,10 +20,6 @@ export class HobbyListComponent implements OnInit, AfterViewInit {
   cards;
   timeout;
 
-  testCards;
-  testTimeout;
-
-
   constructor() { }
 
   cardListAnimate(clarifyAllDelay: number, removeSuppClassDelay: number){
@@ -59,39 +55,6 @@ export class HobbyListComponent implements OnInit, AfterViewInit {
     });
   }
 
-  testAnimation(){
-    this.testCards.forEach(card =>{
-      card.onmouseenter = ()=>{
-          clearTimeout(this.testTimeout);
-          card.classList.add('active');
-          card.classList.remove('blur');
-          card.classList.remove('transition');
-  
-          this.testCards.forEach(cardX=>{
-              if(!(cardX.classList.contains('active'))){
-                  cardX.classList.add('blur');
-              }
-          });  
-      };
-  
-      card.onmouseleave = ()=>{
-          card.classList.remove('active');
-          card.classList.remove("flip");
-          this.testTimeout = setTimeout(()=>{
-              this.testCards.forEach(cardX=>{
-                  cardX.classList.remove('blur');
-                  cardX.classList.add('transition');
-          });
-          setTimeout(()=>{
-              this.testCards.forEach(cardX=>{
-                  cardX.classList.remove('transition');
-          });
-          },3000)
-          }, 200);
-      };
-  });
-  }
-
   ngOnInit() {
     
   }
@@ -99,10 +62,6 @@ export class HobbyListComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(){
     this.cards = document.querySelectorAll('.hobby_item');
     this.cardListAnimate(300, 5000);
-
-    this.testCards = document.querySelectorAll('.card-item');
-
-    this.testAnimation();
   }
 
 }

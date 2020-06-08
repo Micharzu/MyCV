@@ -85,6 +85,8 @@
           transform: scale(1);
   -webkit-filter: brightness(100%);
           filter: brightness(100%);
+  -webkit-filter: blur(0px) grayscale(0%) brightness(100%);
+          filter: blur(0px) grayscale(0%) brightness(100%);
 }
 
 .hobby_item.active .hobby_card {
@@ -97,6 +99,8 @@
 .hobby_item.blur {
   -webkit-filter: brightness(65%);
           filter: brightness(65%);
+  -webkit-filter: blur(1px) grayscale(25%) brightness(80%);
+          filter: blur(1px) grayscale(25%) brightness(80%);
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
   -webkit-box-shadow: none;
