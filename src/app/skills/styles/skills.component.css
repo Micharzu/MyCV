@@ -1,0 +1,205 @@
+.skills {
+  position: relative;
+  min-width: 250px;
+  left: -100vw;
+  max-height: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  -webkit-transition: 1.3s ease-in;
+  transition: 1.3s ease-in;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.skills.initiated {
+  left: 0;
+  -webkit-animation: slideBgDown 1.7s ease-out 1.6s forwards;
+          animation: slideBgDown 1.7s ease-out 1.6s forwards;
+}
+
+@-webkit-keyframes slideBgDown {
+  100% {
+    max-height: 28vw;
+  }
+}
+
+@keyframes slideBgDown {
+  100% {
+    max-height: 28vw;
+  }
+}
+
+.skills.initiated .skill_title h2 {
+  opacity: 1;
+}
+
+.skills.initiated .skill_list .skill_item {
+  -webkit-animation: slideItems 1.7s ease-out forwards;
+          animation: slideItems 1.7s ease-out forwards;
+}
+
+.skills.initiated .skill_list .skill_item:nth-child(1) {
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+
+.skills.initiated .skill_list .skill_item:nth-child(2) {
+  -webkit-animation-delay: 4.2s;
+          animation-delay: 4.2s;
+}
+
+.skills.initiated .skill_list .skill_item:nth-child(3) {
+  -webkit-animation-delay: 5.6s;
+          animation-delay: 5.6s;
+}
+
+@-webkit-keyframes slideItems {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slideItems {
+  100% {
+    left: 0;
+  }
+}
+
+.skills.is-visible .circle_html_lvl {
+  stroke-dashoffset: 12.56637vw;
+}
+
+.skills.is-visible .circle_css_lvl {
+  stroke-dashoffset: 20.10619vw;
+}
+
+.skills.is-visible .circle_js_lvl {
+  stroke-dashoffset: 20.10619vw;
+}
+
+.skills.initiation .circle {
+  -webkit-transition-delay: 8s;
+          transition-delay: 8s;
+}
+
+/* .skills::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: rgba(0, 0, 0, 0.55);
+} */
+.skill_title {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 2vh;
+  background-color: black;
+  border-top: 0.6vh solid #e9c80d;
+  border-bottom: 2px solid #e9c80d;
+  -webkit-transition: 10s;
+  transition: 10s;
+}
+
+.skill_title h2 {
+  opacity: 0;
+  -webkit-transition: 6s;
+  transition: 6s;
+  -webkit-transition-delay: 1.6s;
+          transition-delay: 1.6s;
+}
+
+/* .skill_title::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100vw;
+    max-width: 100%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: black;
+    border-top: 0.6vh solid #e9c80d;
+    border-bottom: 2px solid #e9c80d;
+} */
+.skill_list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 22vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+svg {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 18vw;
+  height: 18vw;
+}
+
+svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #e9c80d;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-dasharray: 50.26548vw;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
+}
+
+.circle {
+  stroke-dashoffset: 50.26548vw;
+  -webkit-transition: 1.6s;
+  transition: 1.6s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.skill_item {
+  position: relative;
+  left: -100vw;
+  padding: 0 10px 0 10px;
+}
+
+.skill_label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
+}
+
+.skill_the_label {
+  color: #dad9b7;
+  font-size: 2.6vw;
+}
+/*# sourceMappingURL=skills.component.css.map */

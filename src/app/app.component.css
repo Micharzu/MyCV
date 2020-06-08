@@ -9,8 +9,8 @@
 }
 
 .about-me-component{
-    margin-top: 7.5vh;
     position: absolute;
+    margin-top: 7.5vh;
     opacity: 0;
 }
 
@@ -22,4 +22,8 @@
     0%   {top:40vh;}
     40%  {opacity: 1;}
     100% {opacity: 1; top:0;}
+}
+
+.skills-component{
+    padding-top: 7.5vh;
 }
