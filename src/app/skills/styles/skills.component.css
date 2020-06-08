@@ -156,8 +156,8 @@ svg circle {
   height: 100%;
   fill: none;
   stroke: #e9c80d;
-  stroke-width: 6px;
-  stroke-linecap: round;
+  stroke-width: 7px;
+  stroke-linecap: butt;
   stroke-dasharray: 50.26548vw;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;

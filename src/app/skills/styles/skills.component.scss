@@ -165,8 +165,8 @@ svg circle{
 
     fill: none;
     stroke: $mainColor;
-    stroke-width: 6px;
-    stroke-linecap: round;
+    stroke-width: 7px;
+    stroke-linecap: butt;
     stroke-dasharray: circleArea($circleSize);
     transform-origin: 50% 50%;
     transform: rotate(-90deg);
