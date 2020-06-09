@@ -19,6 +19,8 @@
   position: relative;
   height: 30vh;
   width: 30vh;
+  min-width: 100px;
+  min-height: 100px;
   margin: 5px;
   -webkit-transition: 1s;
   transition: 1s;

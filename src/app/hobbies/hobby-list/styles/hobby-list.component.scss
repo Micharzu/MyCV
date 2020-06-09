@@ -1,5 +1,6 @@
     $hobby-main-color: #e2c521;
     $card-size: 30vh;
+    $card-size-min: 100px;
 
     @mixin flexCenter {
         display: flex;
@@ -21,6 +22,8 @@
             position: relative;
             height: $card-size;
             width: $card-size;
+            min-width: $card-size-min;
+            min-height: $card-size-min;
             margin: 5px;
     
             transition: 1s;

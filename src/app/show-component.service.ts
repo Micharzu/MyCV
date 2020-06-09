@@ -13,15 +13,15 @@ export class ShowComponentService{
     skillsState = this.showSkills.asObservable();
 
     readonly observerOptions = {
-        threshold: 0.6
+        // threshold: 0.1
     };
 
     readonly observer = new IntersectionObserver((entries, observer)=>{
         entries.forEach(entry=>{
             if(entry.isIntersecting){
-                if(!entry.target.classList.contains('initiated')){
-                    entry.target.classList.add('initiated');
-                }
+                // if(!entry.target.classList.contains('initiated')){
+                //     entry.target.classList.add('initiated');
+                // }
                 entry.target.classList.add('is-visible');
                 
                 this.setComponent(entry.target.id, true);
@@ -30,7 +30,6 @@ export class ShowComponentService{
                 }
             } else if(entry.target.classList.contains('is-visible')){
                 entry.target.classList.remove('is-visible');
-                entry.target.classList.add('scrolled');
                 this.setComponent(entry.target.id, false);
             }
         });

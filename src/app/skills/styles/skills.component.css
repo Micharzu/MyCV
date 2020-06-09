@@ -64,15 +64,15 @@
   }
 }
 
-.skills.is-visible .circle_html_lvl {
+.skills.initiation .circle_html_lvl, .skills.is-visible .circle_html_lvl {
   stroke-dashoffset: 12.56637vw;
 }
 
-.skills.is-visible .circle_css_lvl {
+.skills.initiation .circle_css_lvl, .skills.is-visible .circle_css_lvl {
   stroke-dashoffset: 20.10619vw;
 }
 
-.skills.is-visible .circle_js_lvl {
+.skills.initiation .circle_js_lvl, .skills.is-visible .circle_js_lvl {
   stroke-dashoffset: 20.10619vw;
 }
 

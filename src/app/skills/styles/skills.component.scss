@@ -76,7 +76,7 @@ $pi: 3.1415926536;
     
 }
 
-.skills.is-visible{
+.skills.initiation, .skills.is-visible{
     .circle_html_lvl{
         stroke-dashoffset: circleArea($circleSize) * $skillHTML;
     }
