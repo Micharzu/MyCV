@@ -64,6 +64,10 @@
   }
 }
 
+.skills.initiation .skill_label, .skills.is-visible .skill_label {
+  opacity: 1;
+}
+
 .skills.initiation .circle_html_lvl, .skills.is-visible .circle_html_lvl {
   stroke-dashoffset: 12.56637vw;
 }
@@ -76,7 +80,7 @@
   stroke-dashoffset: 20.10619vw;
 }
 
-.skills.initiation .circle {
+.skills.initiation .circle, .skills.initiation .skill_label {
   -webkit-transition-delay: 8s;
           transition-delay: 8s;
 }
@@ -196,6 +200,11 @@ svg circle {
       -ms-flex-align: center;
           align-items: center;
   z-index: 3;
+  opacity: 0.4;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
 .skill_the_label {

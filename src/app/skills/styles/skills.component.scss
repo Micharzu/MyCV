@@ -12,6 +12,8 @@ $headerSlideDelay: 0.3s;
 $bgSlideTime: 1.7s;
 $bgSlideDelay: ($headerSlideTime + $headerSlideDelay);
 
+$intensifyLabelsTime: 0.8s;
+
 $listElSlideTime: 1.7s;
 $listSlideDelay: ($bgSlideTime + $bgSlideDelay);
 $listElSlideDelay: 1.4s;
@@ -77,6 +79,9 @@ $pi: 3.1415926536;
 }
 
 .skills.initiation, .skills.is-visible{
+    .skill_label{
+        opacity: 1;
+    }
     .circle_html_lvl{
         stroke-dashoffset: circleArea($circleSize) * $skillHTML;
     }
@@ -90,8 +95,11 @@ $pi: 3.1415926536;
     }
 }
 
-.skills.initiation .circle{
-    transition-delay: $circleLoadDelay;
+.skills.initiation{
+
+    .circle, .skill_label{
+        transition-delay: $circleLoadDelay;
+    }
 }
 
 /* .skills::before{
@@ -196,6 +204,10 @@ svg circle{
     justify-content: center;
     align-items: center;
     z-index: 3;
+
+    opacity: 0.4;
+    transition: $intensifyLabelsTime;
+    transition-delay: 0.3s;
 }
 
 .skill_the_label{
