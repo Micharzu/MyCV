@@ -1,4 +1,8 @@
 .footer{
+    background-color: black;
+}
+
+.footer-links{
     display: flex;
     min-height: 20px;
     position: relative;

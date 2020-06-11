@@ -12,6 +12,9 @@ export class ShowComponentService{
     private showSkills = new BehaviorSubject<boolean>(false);
     skillsState = this.showSkills.asObservable();
 
+    private showSubmissions = new BehaviorSubject<boolean>(false);
+    submissionsState = this.showSubmissions.asObservable();
+
     readonly observerOptions = {
         // threshold: 0.1
     };
@@ -43,6 +46,10 @@ export class ShowComponentService{
             }
             case "skills-section":{
                 this.showSkills.next(newState);
+                break;
+            }
+            case "submissions-section":{
+                this.showSubmissions.next(newState);
                 break;
             }
         }

@@ -1,0 +1,32 @@
+.submissions {
+  margin-top: 62vh;
+  width: 100%;
+  -webkit-transition: 1.4s ease-in-out;
+  transition: 1.4s ease-in-out;
+}
+
+.submissions_top {
+  background-color: black;
+  height: 3vh;
+  max-height: 20px;
+  min-height: 10px;
+  bottom: 0;
+}
+
+.submissions_content {
+  background-color: #e9dc6b;
+  bottom: 0;
+  max-height: 0;
+  -webkit-transition: 1.4s ease-in-out;
+  transition: 1.4s ease-in-out;
+  overflow: hidden;
+}
+
+.submissions.is-visible {
+  margin-top: 0;
+}
+
+.submissions.is-visible .submissions_content {
+  max-height: 62vh;
+}
+/*# sourceMappingURL=submissions.component.css.map */

@@ -1,0 +1,33 @@
+$subs-container-height: 62vh;
+
+.submissions{
+    margin-top: $subs-container-height;
+    width: 100%;
+    transition: 1.4s ease-in-out;
+}
+.submissions_top{
+    background-color: black;
+    height: 3vh;
+    max-height: 20px;
+    min-height: 10px;
+
+    bottom: 0;
+}
+
+.submissions_content{
+    background-color: rgb(233, 220, 107);
+
+    bottom: 0;
+
+    max-height: 0;
+    transition: 1.4s ease-in-out;
+    overflow: hidden;
+}
+
+.submissions.is-visible{
+    margin-top: 0;
+
+    .submissions_content{
+        max-height: $subs-container-height;
+    }
+}

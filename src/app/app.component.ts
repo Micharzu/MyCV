@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
 import { ShowComponentService } from './show-component.service';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
