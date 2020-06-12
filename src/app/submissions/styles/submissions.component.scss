@@ -1,9 +1,10 @@
-$subs-container-height: 62vh;
+$subs-container-height: 63vh;
+$subsSlidingTime: 1.4s;
 
 .submissions{
     margin-top: $subs-container-height;
     width: 100%;
-    transition: 1.4s ease-in-out;
+    transition: $subsSlidingTime ease-in-out;
 }
 .submissions_top{
     background-color: black;
@@ -20,7 +21,7 @@ $subs-container-height: 62vh;
     bottom: 0;
 
     max-height: 0;
-    transition: 1.4s ease-in-out;
+    transition: $subsSlidingTime ease-in-out;
     overflow: hidden;
 }
 

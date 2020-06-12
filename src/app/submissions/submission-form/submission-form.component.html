@@ -1,27 +1,26 @@
-<div class="submission_form_header">
-    <h3>Napisz mi co myślisz o stronie!</h3>
-</div>
-
-<div class="submission_form_window">
-    <form class="submission_form">
-
-        <div class="submission_form_name">
-            <label for="submission_form_name" class="submission_label">Twój Podpis</label>
-            <input type="text" id="submission_form_name" class="form-control submission_form_input">
-        </div>
-
-        <div class="submission_form_content">
-            <label for="submission_form_content" class="submission_label">Twój Tekst</label>
-            <textarea id="submission_content" class="form-control submission_form_input"></textarea>
-        </div>
-
-        <div class="submission_button_div">
-            <button class="btn submission_button" (click)="onSendForm()" type="button">Wyślij</button>
-        </div>
-
-        
-
-        
-    </form>
-
+<div class="submission_form-container">
+    <div class="submission_form_header">
+        <h3>Napisz mi co myślisz o stronie!</h3>
+    </div>
+    
+    <div class="submission_form_window">
+        <form class="submission_form">
+    
+            <div class="submission_form_name">
+                <label for="submission_form_name" class="submission_label">Twój Podpis</label>
+                <input type="text" id="submission_form_name" class="form-control submission_form_input">
+            </div>
+    
+            <div class="submission_form_content">
+                <label for="submission_form_content" class="submission_label">Twój Tekst</label>
+                <textarea id="submission_content" class="form-control submission_form_input"></textarea>
+            </div>
+    
+            <div class="submission_button_div">
+                <button class="btn submission_button" (click)="onSendForm()" type="button">Wyślij</button>
+            </div>
+            
+        </form>
+    
+    </div>
 </div>

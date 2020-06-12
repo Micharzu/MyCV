@@ -1,0 +1,158 @@
+.submission_form-container .submission_form_header {
+  position: relative;
+  text-align: center;
+  padding: 7%;
+  background-color: #e6db7c;
+  border: 3px solid rgba(44, 44, 44, 0.05);
+  top: 65vh;
+}
+
+@-webkit-keyframes headerSlideOne {
+  100% {
+    margin-top: 0;
+    top: 0;
+  }
+}
+
+@keyframes headerSlideOne {
+  100% {
+    margin-top: 0;
+    top: 0;
+  }
+}
+
+@-webkit-keyframes headerSlideTwo {
+  0% {
+    margin-top: 0;
+    top: 0;
+  }
+  100% {
+    margin-top: 7%;
+    top: 0;
+  }
+}
+
+@keyframes headerSlideTwo {
+  0% {
+    margin-top: 0;
+    top: 0;
+  }
+  100% {
+    margin-top: 7%;
+    top: 0;
+  }
+}
+
+.submission_form-container .submission_form_window {
+  position: relative;
+  margin: 7% 0 7% 0;
+  padding: 10px;
+  background-color: #d49ffc;
+  border: 3px solid rgba(44, 44, 44, 0.2);
+  border-radius: 8px;
+  top: 50vh;
+}
+
+@-webkit-keyframes formSlide {
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes formSlide {
+  100% {
+    top: 0;
+  }
+}
+
+.submission_form-container .submission_form_window .submission_form {
+  padding: 10px;
+}
+
+.submission_form-container .submission_form_window .submission_form .submission_form_input {
+  background-color: rgba(44, 44, 44, 0.15);
+  border-width: 0.15rem;
+  border-color: rgba(44, 44, 44, 0.15);
+  font-weight: 600;
+}
+
+.submission_form-container .submission_form_window .submission_form .submission_form_input:focus {
+  border-color: rgba(242, 215, 255, 0.8);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(242, 215, 255, 0.2);
+          box-shadow: 0 0 0 0.2rem rgba(242, 215, 255, 0.2);
+  color: #f2d7ff;
+}
+
+.submission_form-container .submission_form_window .submission_form .submission_form_name {
+  margin: 2%;
+}
+
+.submission_form-container .submission_form_window .submission_form .submission_form_content {
+  margin: 15px 2% 15px 2%;
+}
+
+.submission_form-container .submission_form_window .submission_form .submission_label {
+  color: #3a3a3a;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.submission_form-container .submission_form_window .submission_form #submission_content {
+  min-height: 10vh;
+}
+
+.submission_form-container .submission_form_window .submission_form .submission_button_div {
+  width: 96%;
+  margin: 2%;
+}
+
+.submission_form-container .submission_form_window .submission_form .submission_button {
+  width: 100%;
+  color: white;
+  font-weight: 800;
+  background-color: #1b1b1b;
+  border: none;
+}
+
+.submission_form-container .submission_form_window .submission_form .submission_button:hover {
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #3a2046;
+}
+
+.submission_form-container .submission_form_window .submission_form .submission_button:focus, .submission_form-container .submission_form_window .submission_form .submission_button.click {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-animation: flash 1s;
+          animation: flash 1s;
+}
+
+@-webkit-keyframes flash {
+  30% {
+    background-color: #843da5;
+  }
+  100% {
+    background-color: #1b1b1b;
+  }
+}
+
+@keyframes flash {
+  30% {
+    background-color: #843da5;
+  }
+  100% {
+    background-color: #1b1b1b;
+  }
+}
+
+.submission_form-container.initiated .submission_form_header {
+  -webkit-animation: headerSlideOne 0.7s ease-in 2.5s forwards, headerSlideTwo 0.6s ease-out 3.2s forwards;
+          animation: headerSlideOne 0.7s ease-in 2.5s forwards, headerSlideTwo 0.6s ease-out 3.2s forwards;
+}
+
+.submission_form-container.initiated .submission_form_window {
+  -webkit-animation: formSlide 1.4s ease-out 3.5s forwards;
+          animation: formSlide 1.4s ease-out 3.5s forwards;
+}
+/*# sourceMappingURL=submission-form.component.css.map */

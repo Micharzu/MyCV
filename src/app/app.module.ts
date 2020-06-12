@@ -29,7 +29,7 @@ import { SubmissionFormComponent } from './submissions/submission-form/submissio
     HobbyListComponent,
     SubmissionsComponent,
     SubmissionListComponent,
-    SubmissionFormComponent
+    SubmissionFormComponent,
   ],
   imports: [
     BrowserModule
