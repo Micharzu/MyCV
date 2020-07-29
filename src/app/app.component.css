@@ -1,29 +1,35 @@
-.header{
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+.header {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
-.about-me-section{
-    margin-bottom: 50vh;
-    position: relative;
+.about-me-section {
+  position: relative;
 }
 
-.about-me-component{
-    position: absolute;
-    margin-top: 7.5vh;
-    opacity: 0;
+.about-me-component {
+  position: relative;
+  margin-top: 7.5vh;
+  opacity: 0;
 }
 
-.is-visible .about-me-component{
-    animation: rise 3s forwards;
+.is-visible .about-me-component {
+  animation: rise 1.5s forwards;
 }
 
-@keyframes rise{
-    0%   {top:40vh;}
-    40%  {opacity: 1;}
-    100% {opacity: 1; top:0;}
+@keyframes rise {
+  0% {
+    top: 40vh;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
 
-.skills-component{
-    padding-top: 7.5vh;
+.skills-component {
+  padding-top: 7.5vh;
 }

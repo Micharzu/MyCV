@@ -4,16 +4,16 @@
   left: -100vw;
   max-height: 0;
   background-color: rgba(0, 0, 0, 0.55);
-  -webkit-transition: 1.3s ease-in;
-  transition: 1.3s ease-in;
+  -webkit-transition: 0.6s ease-in;
+  transition: 0.6s ease-in;
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
 }
 
 .skills.initiated {
   left: 0;
-  -webkit-animation: slideBgDown 1.7s ease-out 1.6s forwards;
-          animation: slideBgDown 1.7s ease-out 1.6s forwards;
+  -webkit-animation: slideBgDown 1.7s ease-out 0.9s forwards;
+          animation: slideBgDown 1.7s ease-out 0.9s forwards;
 }
 
 @-webkit-keyframes slideBgDown {
@@ -38,18 +38,18 @@
 }
 
 .skills.initiated .skill_list .skill_item:nth-child(1) {
-  -webkit-animation-delay: 2.8s;
-          animation-delay: 2.8s;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
 }
 
 .skills.initiated .skill_list .skill_item:nth-child(2) {
-  -webkit-animation-delay: 4.2s;
-          animation-delay: 4.2s;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
 }
 
 .skills.initiated .skill_list .skill_item:nth-child(3) {
-  -webkit-animation-delay: 5.6s;
-          animation-delay: 5.6s;
+  -webkit-animation-delay: 4.9s;
+          animation-delay: 4.9s;
 }
 
 @-webkit-keyframes slideItems {
@@ -81,8 +81,8 @@
 }
 
 .skills.initiation .circle, .skills.initiation .skill_label {
-  -webkit-transition-delay: 8s;
-          transition-delay: 8s;
+  -webkit-transition-delay: 7.3s;
+          transition-delay: 7.3s;
 }
 
 /* .skills::before{
@@ -113,8 +113,8 @@
   opacity: 0;
   -webkit-transition: 6s;
   transition: 6s;
-  -webkit-transition-delay: 1.6s;
-          transition-delay: 1.6s;
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
 }
 
 /* .skill_title::before{
