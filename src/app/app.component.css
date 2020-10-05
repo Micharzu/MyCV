@@ -1,3 +1,13 @@
+.main {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.main .section {
+  scroll-snap-align: center;
+}
+
 .header {
   margin-top: 5vh;
   margin-bottom: 5vh;
