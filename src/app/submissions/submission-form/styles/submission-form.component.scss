@@ -1,6 +1,8 @@
 $headerSlideTime: 0.7s;
 $headerSlideDelay: 2.5s;
 
+$smallHeaderSlideTime: 1.2s;
+
 $formSlideTime: 1.4s;
 $formSlideDelay: $headerSlideDelay + 1s;
 
@@ -125,6 +127,20 @@ $formSlideDelay: $headerSlideDelay + 1s;
         forwards,
       headerSlideTwo 0.6s ease-out ($headerSlideDelay + $headerSlideTime)
         forwards;
+  }
+
+  @media only screen and (max-width: 400px) {
+    .submission_form_header {
+      padding: 3%;
+      border-left: none;
+      border-right: none;
+      h3 {
+        font-size: 1.2em;
+      }
+
+      animation: headerSlideOne $smallHeaderSlideTime linear $headerSlideDelay
+        forwards;
+    }
   }
 
   .submission_form_window {

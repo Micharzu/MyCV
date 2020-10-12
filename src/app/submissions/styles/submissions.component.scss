@@ -1,4 +1,6 @@
 $subs-container-height: 80vh;
+$smallSubsContainerHeight: 100vh;
+
 $subsSlidingTime: 1.4s;
 
 .submissions {
@@ -29,6 +31,25 @@ $subsSlidingTime: 1.4s;
   margin-top: 0;
 
   .submissions_content {
-    max-height: $subs-container-height;
+    max-height: $smallSubsContainerHeight;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .submissions_content {
+    padding: 0 15px;
+    display: flex;
+  }
+  .sub-list {
+    width: 45%;
+  }
+  .sub-form {
+    width: 55%;
+  }
+
+  .submissions.is-visible {
+    .submissions_content {
+      max-height: $subs-container-height;
+    }
   }
 }

@@ -1,5 +1,5 @@
 .submission_list {
-  padding: 10px;
+  padding: 10px 10px 0;
 }
 
 .submission_list .single_submission {
@@ -10,6 +10,18 @@
   border: 3px solid rgba(44, 44, 44, 0.08);
   border-radius: 15px;
   top: 65vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .submission_list {
+    padding: 10px;
+  }
+  .submission_list .single_submission {
+    margin: 1vh;
+    padding: 5px;
+    border-radius: 10px;
+    top: 85vh;
+  }
 }
 
 .submission_list.initiated .single_submission {

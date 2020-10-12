@@ -27,6 +27,24 @@
 }
 
 .submissions.is-visible .submissions_content {
-  max-height: 80vh;
+  max-height: 100vh;
+}
+
+@media only screen and (min-width: 400px) {
+  .submissions_content {
+    padding: 0 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .sub-list {
+    width: 45%;
+  }
+  .sub-form {
+    width: 55%;
+  }
+  .submissions.is-visible .submissions_content {
+    max-height: 80vh;
+  }
 }
 /*# sourceMappingURL=submissions.component.css.map */

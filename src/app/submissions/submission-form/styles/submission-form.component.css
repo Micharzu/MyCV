@@ -151,6 +151,19 @@
           animation: headerSlideOne 0.7s ease-in 2.5s forwards, headerSlideTwo 0.6s ease-out 3.2s forwards;
 }
 
+@media only screen and (max-width: 400px) {
+  .submission_form-container.initiated .submission_form_header {
+    padding: 3%;
+    border-left: none;
+    border-right: none;
+    -webkit-animation: headerSlideOne 1.2s linear 2.5s forwards;
+            animation: headerSlideOne 1.2s linear 2.5s forwards;
+  }
+  .submission_form-container.initiated .submission_form_header h3 {
+    font-size: 1.2em;
+  }
+}
+
 .submission_form-container.initiated .submission_form_window {
   -webkit-animation: formSlide 1.4s ease-out 3.5s forwards;
           animation: formSlide 1.4s ease-out 3.5s forwards;
