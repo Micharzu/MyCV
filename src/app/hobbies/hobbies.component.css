@@ -1,36 +1,37 @@
-.hobbies_header{
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    height: 10vh;
+.hobbies_header {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 10vh;
 
-    color: #e9c80d;
+  color: #e9c80d;
 }
 
-.hobbies_header::before, .hobbies_header::after{
-    content: '';
-    display: block;
-    position: absolute;
-    width: 30%;
-    height: 8%;
-    min-height: 3px;
-    background-color: #e9c80d;
-    top: 45%;
+.hobbies_header::before,
+.hobbies_header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 8%;
+  min-height: 3px;
+  background-color: #e9c80d;
+  top: 45%;
 }
 
-.hobbies_header::after{
-    left: 70%;
+.hobbies_header::after {
+  left: 80%;
 }
 
-.hobbies_header_label{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hobbies_header_label {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-h2{
-    font-size: 3.4em;
-    /* font-size: 4vh; */
+h2 {
+  font-size: 5.3vw;
+  /* font-size: 4vh; */
 }

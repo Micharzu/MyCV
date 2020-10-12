@@ -1,9 +1,9 @@
-$mainColor:#e9c80d;
+$mainColor: #e9c80d;
 
 $skillItems: 3;
 $circleSize: 8vw;
 $skillHTML: 1- 0.75;
-$skillCSS: 1- 0.6; 
+$skillCSS: 1- 0.6;
 $skillJS: 1- 0.6;
 
 $headerSlideTime: 0.6s;
@@ -19,87 +19,100 @@ $listSlideDelay: ($bgSlideTime + $bgSlideDelay);
 $listElSlideDelay: 1.4s;
 
 $circleLoadTime: 1.6s;
-$circleLoadDelay: ($listSlideDelay + ($skillItems * $listElSlideDelay) + $listElSlideTime - $listElSlideDelay +0.2s);
-
+$circleLoadDelay: (
+  $listSlideDelay + ($skillItems * $listElSlideDelay) + $listElSlideTime -
+    $listElSlideDelay + 0.2s
+);
 
 $pi: 3.1415926536;
-@function circleArea($radius){
-    $result: 2*$pi*$radius;
-    @return $result;
+@function circleArea($radius) {
+  $result: 2 * $pi * $radius;
+  @return $result;
 }
 
-@function changeNumber($number, $diff){
-    $result: $number + $diff;
-    @return $result;
+@function changeNumber($number, $diff) {
+  $result: $number + $diff;
+  @return $result;
 }
 
-.skills{
-    position: relative;
-    min-width: 250px;
+.skills {
+  position: relative;
+  min-width: 250px;
 
-    left: -100vw;
-    max-height: 0;
+  left: -100vw;
+  max-height: 0;
 
-    background-color: rgba(0, 0, 0, 0.55);
-    transition: $headerSlideTime ease-in;
-    transition-delay: $headerSlideDelay;
+  background-color: rgba(0, 0, 0, 0.55);
+  transition: $headerSlideTime ease-in;
+  transition-delay: $headerSlideDelay;
 }
 
-.skills.initiated{
-    left: 0;
-    animation: slideBgDown $bgSlideTime ease-out $bgSlideDelay forwards;  
-    
-    @keyframes slideBgDown{
-        100% {max-height: 28vw;}
+.skills.initiated {
+  left: 0;
+  animation: slideBgDown $bgSlideTime ease-out $bgSlideDelay forwards;
+
+  @keyframes slideBgDown {
+    100% {
+      max-height: 28vw;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    @keyframes slideBgDown {
+      100% {
+        max-height: 45vw;
+      }
+    }
+  }
+
+  .skill_title h2 {
+    opacity: 1;
+  }
+
+  .skill_list {
+    .skill_item {
+      animation: slideItems $listElSlideTime ease-out forwards;
     }
 
-    .skill_title h2{
-        opacity: 1;
+    @for $item from 1 to (1 + $skillItems) {
+      .skill_item:nth-child(#{$item}) {
+        animation-delay: $listSlideDelay +
+          ($listElSlideDelay * $item - $listElSlideDelay) -
+          0.5s;
+      }
     }
 
-    .skill_list{
-
-        .skill_item{
-            animation: slideItems $listElSlideTime ease-out forwards;
-        }
-
-        @for $item from 1 to (1 +$skillItems) {
-            .skill_item:nth-child(#{$item}){
-                animation-delay: $listSlideDelay + ($listElSlideDelay*$item - $listElSlideDelay) - 0.5s;
-
-            }
-        }
-
-        @keyframes slideItems{
-            100% {left: 0;}
-        }
-
+    @keyframes slideItems {
+      100% {
+        left: 0;
+      }
     }
-    
+  }
 }
 
-.skills.initiation, .skills.is-visible{
-    .skill_label{
-        opacity: 1;
-    }
-    .circle_html_lvl{
-        stroke-dashoffset: circleArea($circleSize) * $skillHTML;
-    }
-    
-    .circle_css_lvl{
-        stroke-dashoffset: circleArea($circleSize) * $skillCSS;
-    }
-    
-    .circle_js_lvl{
-        stroke-dashoffset: circleArea($circleSize) * $skillJS;
-    }
+.skills.initiation,
+.skills.is-visible {
+  .skill_label {
+    opacity: 1;
+  }
+  .circle_html_lvl {
+    stroke-dashoffset: circleArea($circleSize) * $skillHTML;
+  }
+
+  .circle_css_lvl {
+    stroke-dashoffset: circleArea($circleSize) * $skillCSS;
+  }
+
+  .circle_js_lvl {
+    stroke-dashoffset: circleArea($circleSize) * $skillJS;
+  }
 }
 
-.skills.initiation{
-
-    .circle, .skill_label{
-        transition-delay: $circleLoadDelay;
-    }
+.skills.initiation {
+  .circle,
+  .skill_label {
+    transition-delay: $circleLoadDelay;
+  }
 }
 
 /* .skills::before{
@@ -115,23 +128,23 @@ $pi: 3.1415926536;
     background-color: rgba(0, 0, 0, 0.55);
 } */
 
-.skill_title{
-    position: relative;
-    text-align: center;
-    color: white;
-    padding: 2vh;
+.skill_title {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 2vh;
 
-    background-color: black;
-    border-top: 0.6vh solid $mainColor;
-    border-bottom: 2px solid $mainColor;
+  background-color: black;
+  border-top: 0.6vh solid $mainColor;
+  border-bottom: 2px solid $mainColor;
 
-    transition: 10s;
+  transition: 10s;
 
-    h2{
-        opacity: 0;
-        transition: 6s;
-        transition-delay: $bgSlideDelay;
-    }
+  h2 {
+    opacity: 0;
+    transition: 6s;
+    transition-delay: $bgSlideDelay;
+  }
 }
 
 /* .skill_title::before{
@@ -150,68 +163,71 @@ $pi: 3.1415926536;
     border-bottom: 2px solid #e9c80d;
 } */
 
-
-.skill_list{
-    position: relative;
-    display: flex;
-    height: 22vw;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
+.skill_list {
+  position: relative;
+  display: flex;
+  height: 22vw;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
 
-svg{
-    position: relative;
-    display: flex;
-    width: 18vw;
-    height: 18vw;
+svg {
+  position: relative;
+  display: flex;
+  width: 18vw;
+  height: 18vw;
 }
 
-svg circle{
-    width: 100%;
-    height: 100%;
+svg circle {
+  width: 100%;
+  height: 100%;
 
-    fill: none;
-    stroke: $mainColor;
-    stroke-width: 7px;
-    stroke-linecap: butt;
-    stroke-dasharray: circleArea($circleSize);
-    transform-origin: 50% 50%;
-    transform: rotate(-90deg);
+  fill: none;
+  stroke: $mainColor;
+  stroke-width: 7px;
+  stroke-linecap: butt;
+  stroke-dasharray: circleArea($circleSize);
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
 
-    position: absolute;
+  position: absolute;
+
+  @media only screen and (max-width: 768px) {
+    stroke-width: 4px;
+  }
 }
 
-.circle{
-    stroke-dashoffset: circleArea($circleSize);
-    transition: $circleLoadTime;
-    transition-delay: 0.3s;
+.circle {
+  stroke-dashoffset: circleArea($circleSize);
+  transition: $circleLoadTime;
+  transition-delay: 0.3s;
 }
 
-.skill_item{
-    position: relative;
-    left: -100vw;
-    padding: 0 10px 0 10px;
+.skill_item {
+  position: relative;
+  left: -100vw;
+  padding: 0 10px 0 10px;
 }
 
-.skill_label{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 3;
+.skill_label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
 
-    opacity: 0.4;
-    transition: $intensifyLabelsTime;
-    transition-delay: 0.3s;
+  opacity: 0.4;
+  transition: $intensifyLabelsTime;
+  transition-delay: 0.3s;
 }
 
-.skill_the_label{
-    color: rgb(218, 217, 183);
-    font-size: 2.6vw;
-
+.skill_the_label {
+  color: rgb(218, 217, 183);
+  font-size: 2.6vw;
+  margin: 0;
 }

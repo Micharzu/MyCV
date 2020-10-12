@@ -1,17 +1,17 @@
 .main {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   height: 100vh;
   overflow-y: scroll;
 }
 
 .main .section {
-  scroll-snap-align: center;
+  /* scroll-snap-align: center; */
 }
 
-.header {
+/* .header {
   margin-top: 5vh;
   margin-bottom: 5vh;
-}
+} */
 
 .about-me-section {
   position: relative;
@@ -32,7 +32,7 @@
     top: 40vh;
   }
   40% {
-    opacity: 1;
+    opacity: 0.6;
   }
   100% {
     opacity: 1;

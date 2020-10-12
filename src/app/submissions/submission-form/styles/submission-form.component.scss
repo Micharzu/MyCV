@@ -2,122 +2,132 @@ $headerSlideTime: 0.7s;
 $headerSlideDelay: 2.5s;
 
 $formSlideTime: 1.4s;
-$formSlideDelay: $headerSlideDelay+1s;
+$formSlideDelay: $headerSlideDelay + 1s;
 
+.submission_form-container {
+  .submission_form_header {
+    position: relative;
+    text-align: center;
+    padding: 7%;
+    background-color: rgb(230, 219, 124);
+    border: 3px solid rgba(44, 44, 44, 0.05);
+    top: 82vh;
+  }
 
-.submission_form-container{
-    .submission_form_header{
-        position: relative;
-        text-align: center;
-        padding: 7%;
-        background-color: rgb(230, 219, 124);
-        border: 3px solid rgba(44, 44, 44, 0.05) ;
-        top: 65vh;        
+  @keyframes headerSlideOne {
+    100% {
+      margin-top: 0;
+      top: 0;
     }
-    
-    @keyframes headerSlideOne {
-        100% {margin-top: 0; top: 0;}
+  }
+
+  @keyframes headerSlideTwo {
+    0% {
+      margin-top: 0;
+      top: 0;
     }
-    
-    @keyframes headerSlideTwo {
-        0%   {margin-top: 0; top: 0;}
-        100% {margin-top: 7%; top: 0;}
+    100% {
+      margin-top: 7%;
+      top: 0;
     }
-    
-    .submission_form_window{
-        position: relative;
-        margin: 7% 0 7% 0;
-        padding: 10px;
-        background-color: rgb(212, 159, 252);
-        border: 3px solid rgba(44, 44, 44, 0.2) ;
-        border-radius: 8px;
-    
-        top: 50vh;
-    
-        @keyframes formSlide {
-            100% {top: 0;}
+  }
+
+  .submission_form_window {
+    position: relative;
+    margin: 7% 0 7% 0;
+    padding: 10px;
+    background-color: rgb(212, 159, 252);
+    border: 3px solid rgba(44, 44, 44, 0.2);
+    border-radius: 8px;
+
+    top: 70vh;
+
+    @keyframes formSlide {
+      100% {
+        top: 0;
+      }
+    }
+
+    .submission_form {
+      padding: 5px 10px;
+
+      .submission_form_input {
+        background-color: rgba(44, 44, 44, 0.15);
+        border-width: 0.15rem;
+        border-color: rgba(44, 44, 44, 0.15);
+        font-weight: 600;
+
+        &:focus {
+          border-color: rgba(242, 215, 255, 0.8);
+          box-shadow: 0 0 0 0.2rem rgba(242, 215, 255, 0.2);
+          color: rgb(242, 215, 255);
+        }
+      }
+
+      .submission_form_name {
+        margin: 2%;
+      }
+
+      .submission_form_content {
+        margin: 15px 2% 15px 2%;
+      }
+
+      .submission_label {
+        color: rgb(58, 58, 58);
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
+      #submission_content {
+        min-height: 10vh;
+      }
+
+      .submission_button_div {
+        width: 96%;
+        margin: 2%;
+      }
+
+      .submission_button {
+        width: 100%;
+        color: white;
+        font-weight: 800;
+        background-color: rgb(27, 27, 27);
+        border: none;
+
+        &:hover {
+          border: none;
+          transition: 0.3s;
+          background-color: rgb(58, 32, 70);
         }
 
-        .submission_form{
-            padding: 10px;
-
-            .submission_form_input{
-                background-color: rgba(44, 44, 44, 0.15);
-                border-width: 0.15rem;
-                border-color: rgba(44, 44, 44, 0.15);
-                font-weight: 600;
-
-                &:focus{
-                    border-color: rgba(242, 215, 255, 0.8);
-                    box-shadow: 0 0 0 0.2rem rgba(242, 215, 255, 0.2);
-                    color: rgb(242, 215, 255);
-                }
-            }
-
-            .submission_form_name{
-                margin: 2%;
-            }
-
-            .submission_form_content{
-                margin: 15px 2% 15px 2%;
-            
-            }
-
-            .submission_label{
-                color: rgb(58, 58, 58);
-                font-size: 1.1rem;
-                font-weight: 700;
-            }
-            
-            #submission_content{
-                min-height: 10vh;
-            }
-            
-            .submission_button_div{
-                width: 96%;
-                margin: 2%;
-            }
-
-            .submission_button{
-                width: 100%;
-                color: white;
-                font-weight: 800;
-                background-color: rgb(27, 27, 27);
-                border: none;
-
-                &:hover{
-                    border: none;
-                    transition: 0.3s;
-                    background-color: rgb(58, 32, 70);
-
-                }
-                
-                &:focus, &.click{
-                    box-shadow: none;
-                    animation: flash 1s;
-                }
-
-                @keyframes flash{
-                    30%  {background-color: rgb(132, 61, 165);}
-                    100%  {background-color: rgb(27, 27, 27);}
-                }
-            }
-
-
+        &:focus,
+        &.click {
+          box-shadow: none;
+          animation: flash 1s;
         }
+
+        @keyframes flash {
+          30% {
+            background-color: rgb(132, 61, 165);
+          }
+          100% {
+            background-color: rgb(27, 27, 27);
+          }
+        }
+      }
     }
+  }
 }
 
-.submission_form-container.initiated{
-    .submission_form_header{
-        animation: 
-            headerSlideOne $headerSlideTime ease-in $headerSlideDelay forwards,
-            headerSlideTwo 0.6s ease-out ($headerSlideDelay+$headerSlideTime) forwards;
-    }
+.submission_form-container.initiated {
+  .submission_form_header {
+    animation: headerSlideOne $headerSlideTime ease-in $headerSlideDelay
+        forwards,
+      headerSlideTwo 0.6s ease-out ($headerSlideDelay + $headerSlideTime)
+        forwards;
+  }
 
-    .submission_form_window{
-        animation: formSlide $formSlideTime ease-out $formSlideDelay forwards;
-    }
+  .submission_form_window {
+    animation: formSlide $formSlideTime ease-out $formSlideDelay forwards;
+  }
 }
-
-

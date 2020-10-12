@@ -17,8 +17,8 @@
 
 .hobby-list .hobby_item {
   position: relative;
-  height: 30vh;
-  width: 30vh;
+  height: 12vw;
+  width: 12vw;
   min-width: 100px;
   min-height: 100px;
   margin: 5px;
@@ -41,7 +41,8 @@
           transform-style: preserve-3d;
 }
 
-.hobby_card_front, .hobby_card_back {
+.hobby_card_front,
+.hobby_card_back {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,6 +76,13 @@
 
 .hobby_card_front h2 {
   color: #e2c521;
+  font-size: 1.5em;
+}
+
+@media only screen and (max-width: 768px) {
+  .hobby_card_front h2 {
+    font-size: 1em;
+  }
 }
 
 .hobby_card_back {

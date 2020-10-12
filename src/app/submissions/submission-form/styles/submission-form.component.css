@@ -4,7 +4,7 @@
   padding: 7%;
   background-color: #e6db7c;
   border: 3px solid rgba(44, 44, 44, 0.05);
-  top: 65vh;
+  top: 82vh;
 }
 
 @-webkit-keyframes headerSlideOne {
@@ -50,7 +50,7 @@
   background-color: #d49ffc;
   border: 3px solid rgba(44, 44, 44, 0.2);
   border-radius: 8px;
-  top: 50vh;
+  top: 70vh;
 }
 
 @-webkit-keyframes formSlide {
@@ -66,7 +66,7 @@
 }
 
 .submission_form-container .submission_form_window .submission_form {
-  padding: 10px;
+  padding: 5px 10px;
 }
 
 .submission_form-container .submission_form_window .submission_form .submission_form_input {

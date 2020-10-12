@@ -28,6 +28,19 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  @-webkit-keyframes slideBgDown {
+    100% {
+      max-height: 45vw;
+    }
+  }
+  @keyframes slideBgDown {
+    100% {
+      max-height: 45vw;
+    }
+  }
+}
+
 .skills.initiated .skill_title h2 {
   opacity: 1;
 }
@@ -64,23 +77,28 @@
   }
 }
 
-.skills.initiation .skill_label, .skills.is-visible .skill_label {
+.skills.initiation .skill_label,
+.skills.is-visible .skill_label {
   opacity: 1;
 }
 
-.skills.initiation .circle_html_lvl, .skills.is-visible .circle_html_lvl {
+.skills.initiation .circle_html_lvl,
+.skills.is-visible .circle_html_lvl {
   stroke-dashoffset: 12.56637vw;
 }
 
-.skills.initiation .circle_css_lvl, .skills.is-visible .circle_css_lvl {
+.skills.initiation .circle_css_lvl,
+.skills.is-visible .circle_css_lvl {
   stroke-dashoffset: 20.10619vw;
 }
 
-.skills.initiation .circle_js_lvl, .skills.is-visible .circle_js_lvl {
+.skills.initiation .circle_js_lvl,
+.skills.is-visible .circle_js_lvl {
   stroke-dashoffset: 20.10619vw;
 }
 
-.skills.initiation .circle, .skills.initiation .skill_label {
+.skills.initiation .circle,
+.skills.initiation .skill_label {
   -webkit-transition-delay: 7.3s;
           transition-delay: 7.3s;
 }
@@ -170,6 +188,12 @@ svg circle {
   position: absolute;
 }
 
+@media only screen and (max-width: 768px) {
+  svg circle {
+    stroke-width: 4px;
+  }
+}
+
 .circle {
   stroke-dashoffset: 50.26548vw;
   -webkit-transition: 1.6s;
@@ -210,5 +234,6 @@ svg circle {
 .skill_the_label {
   color: #dad9b7;
   font-size: 2.6vw;
+  margin: 0;
 }
 /*# sourceMappingURL=skills.component.css.map */

@@ -1,5 +1,5 @@
 .submissions {
-  margin-top: 63vh;
+  margin-top: 80vh;
   width: 100%;
   -webkit-transition: 1.4s ease-in-out;
   transition: 1.4s ease-in-out;
@@ -27,6 +27,6 @@
 }
 
 .submissions.is-visible .submissions_content {
-  max-height: 63vh;
+  max-height: 80vh;
 }
 /*# sourceMappingURL=submissions.component.css.map */

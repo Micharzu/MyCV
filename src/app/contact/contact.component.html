@@ -1,29 +1,45 @@
 <div class="contact_window">
-    <div class="contact_title">
-        <h2>KONTAKT</h2>
-    </div>
+  <div class="contact_title">
+    <h2>KONTAKT</h2>
+  </div>
 
-    <form class="contact_form">
+  <form class="contact_form">
+    <textarea
+      id="contact_content"
+      class="form-control contact_input"
+    ></textarea>
 
-        <textarea id="contact_content" class="form-control contact_input"></textarea>
+    <div style="padding-top: 2vh"></div>
 
-        <div style="padding-top: 2vh;"></div>
-
-        <div class="contact_flex">
-
-
-            <label for="contact_username" class="contact_label contact_username">PODPIS</label>
+    <div class="contact_flex">
+      <!-- <label for="contact_username" class="contact_label contact_username">PODPIS</label>
             <input type="text" id="contact_name" class="form-control contact_input contact_username">
 
             <label for="contact_user_mail" class="contact_label contact_user_mail">ADRES ZWROTNY</label>
-            <input type="email" id="contact_email" class="form-control contact_input contact_user_mail">
+            <input type="email" id="contact_email" class="form-control contact_input contact_user_mail"> -->
+      <div class="contact_username">
+        <label for="contact_username" class="contact_label">PODPIS</label>
+        <input
+          type="text"
+          id="contact_name"
+          class="form-control contact_input"
+        />
+      </div>
 
-            <button class="btn contact_button" (click)="onSendForm()" type="button">WYŚLIJ</button>
+      <div class="contact_user_mail">
+        <label for="contact_user_mail" class="contact_label"
+          >ADRES ZWROTNY</label
+        >
+        <input
+          type="email"
+          id="contact_email"
+          class="form-control contact_input"
+        />
+      </div>
 
-
-        </div>
-        
-        
-    </form>
-
+      <button class="btn contact_button" (click)="onSendForm()" type="button">
+        WYŚLIJ
+      </button>
+    </div>
+  </form>
 </div>

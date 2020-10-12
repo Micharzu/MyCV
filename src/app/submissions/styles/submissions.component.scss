@@ -1,34 +1,34 @@
-$subs-container-height: 63vh;
+$subs-container-height: 80vh;
 $subsSlidingTime: 1.4s;
 
-.submissions{
-    margin-top: $subs-container-height;
-    width: 100%;
-    transition: $subsSlidingTime ease-in-out;
+.submissions {
+  margin-top: $subs-container-height;
+  width: 100%;
+  transition: $subsSlidingTime ease-in-out;
 }
-.submissions_top{
-    background-color: black;
-    height: 3vh;
-    max-height: 20px;
-    min-height: 10px;
+.submissions_top {
+  background-color: black;
+  height: 3vh;
+  max-height: 20px;
+  min-height: 10px;
 
-    bottom: 0;
-}
-
-.submissions_content{
-    background-color: rgb(233, 220, 107);
-
-    bottom: 0;
-
-    max-height: 0;
-    transition: $subsSlidingTime ease-in-out;
-    overflow: hidden;
+  bottom: 0;
 }
 
-.submissions.is-visible{
-    margin-top: 0;
+.submissions_content {
+  background-color: rgb(233, 220, 107);
 
-    .submissions_content{
-        max-height: $subs-container-height;
-    }
+  bottom: 0;
+
+  max-height: 0;
+  transition: $subsSlidingTime ease-in-out;
+  overflow: hidden;
+}
+
+.submissions.is-visible {
+  margin-top: 0;
+
+  .submissions_content {
+    max-height: $subs-container-height;
+  }
 }
