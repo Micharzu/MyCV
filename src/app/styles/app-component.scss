@@ -9,13 +9,8 @@
 }
 
 .footer {
-  scroll-snap-align: end;
+  scroll-snap-align: start;
 }
-
-/* .header {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-} */
 
 .about-me-section {
   position: relative;
@@ -27,8 +22,20 @@
   opacity: 0;
 }
 
-.is-visible .about-me-component {
-  animation: rise 1.5s forwards;
+.main .submissions-section {
+  scroll-snap-align: none;
+}
+
+.is-visible {
+  .about-me-component {
+    animation: rise 1.5s forwards;
+  }
+  // .submissions-section{
+  //     animation: getSnap 0s 10s forwards;
+  // }
+  // @keyframes getSnap {
+  //     100% {scroll-snap-align: center;}
+  // }
 }
 
 @keyframes rise {
