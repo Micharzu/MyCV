@@ -2,43 +2,21 @@
   position: relative;
   min-width: 250px;
   left: -100vw;
-  max-height: 0;
-  background-color: rgba(0, 0, 0, 0.55);
+  max-height: 28vw;
   -webkit-transition: 0.6s ease-in;
   transition: 0.6s ease-in;
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
 }
 
+@media only screen and (max-width: 768px) {
+  .skills {
+    max-height: 45vw;
+  }
+}
+
 .skills.initiated {
   left: 0;
-  -webkit-animation: slideBgDown 1.7s ease-out 0.9s forwards;
-          animation: slideBgDown 1.7s ease-out 0.9s forwards;
-}
-
-@-webkit-keyframes slideBgDown {
-  100% {
-    max-height: 28vw;
-  }
-}
-
-@keyframes slideBgDown {
-  100% {
-    max-height: 28vw;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  @-webkit-keyframes slideBgDown {
-    100% {
-      max-height: 45vw;
-    }
-  }
-  @keyframes slideBgDown {
-    100% {
-      max-height: 45vw;
-    }
-  }
 }
 
 .skills.initiated .skill_title h2 {
@@ -155,13 +133,54 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 22vw;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.skill_list.initiated {
+  -webkit-animation: slideListDown 1.7s ease-out 0.9s forwards;
+          animation: slideListDown 1.7s ease-out 0.9s forwards;
+}
+
+@-webkit-keyframes slideListDown {
+  100% {
+    height: 22vw;
+  }
+}
+
+@keyframes slideListDown {
+  100% {
+    height: 22vw;
+  }
+}
+
+.skill_list_placeholder {
+  position: relative;
+  height: 22vw;
+  background-color: transparent;
+}
+
+.skills.initiated .skill_list_placeholder {
+  -webkit-animation: makePlace 1.7s ease-out 0.9s forwards;
+          animation: makePlace 1.7s ease-out 0.9s forwards;
+}
+
+@-webkit-keyframes makePlace {
+  100% {
+    height: 0;
+  }
+}
+
+@keyframes makePlace {
+  100% {
+    height: 0;
+  }
 }
 
 svg {

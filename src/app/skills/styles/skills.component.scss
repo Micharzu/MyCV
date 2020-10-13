@@ -40,30 +40,33 @@ $pi: 3.1415926536;
   min-width: 250px;
 
   left: -100vw;
-  max-height: 0;
+  max-height: 28vw;
 
-  background-color: rgba(0, 0, 0, 0.55);
   transition: $headerSlideTime ease-in;
   transition-delay: $headerSlideDelay;
+  @media only screen and (max-width: 768px) {
+    max-height: 45vw;
+  }
 }
 
 .skills.initiated {
   left: 0;
-  animation: slideBgDown $bgSlideTime ease-out $bgSlideDelay forwards;
 
-  @keyframes slideBgDown {
-    100% {
-      max-height: 28vw;
-    }
-  }
+  // animation: slideBgDown $bgSlideTime ease-out $bgSlideDelay forwards;
 
-  @media only screen and (max-width: 768px) {
-    @keyframes slideBgDown {
-      100% {
-        max-height: 45vw;
-      }
-    }
-  }
+  // @keyframes slideBgDown {
+  //   100% {
+  //     max-height: 28vw;
+  //   }
+  // }
+
+  // @media only screen and (max-width: 768px) {
+  //   @keyframes slideBgDown {
+  //     100% {
+  //       max-height: 45vw;
+  //     }
+  //   }
+  // }
 
   .skill_title h2 {
     opacity: 1;
@@ -166,10 +169,39 @@ $pi: 3.1415926536;
 .skill_list {
   position: relative;
   display: flex;
-  height: 22vw;
   justify-content: space-around;
   align-items: center;
   text-align: center;
+
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+
+  &.initiated {
+    animation: slideListDown $bgSlideTime ease-out $bgSlideDelay forwards;
+  }
+
+  @keyframes slideListDown {
+    100% {
+      height: 22vw;
+    }
+  }
+}
+
+.skill_list_placeholder {
+  position: relative;
+  height: 22vw;
+  background-color: transparent;
+}
+
+.skills.initiated {
+  .skill_list_placeholder {
+    animation: makePlace $bgSlideTime ease-out $bgSlideDelay forwards;
+  }
+  @keyframes makePlace {
+    100% {
+      height: 0;
+    }
+  }
 }
 
 svg {
