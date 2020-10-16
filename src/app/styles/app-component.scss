@@ -2,6 +2,23 @@
   scroll-snap-type: y proximity;
   height: 100vh;
   overflow-y: scroll;
+  &::after {
+    position: fixed;
+    top: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    transition: 0.5s ease-in;
+    z-index: -1;
+  }
+  &.nav-active {
+    scroll-snap-type: none;
+    &::after {
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 9;
+    }
+  }
 }
 
 .main .section {
@@ -30,12 +47,6 @@
   .about-me-component {
     animation: rise 1.5s forwards;
   }
-  // .submissions-section{
-  //     animation: getSnap 0s 10s forwards;
-  // }
-  // @keyframes getSnap {
-  //     100% {scroll-snap-align: center;}
-  // }
 }
 
 @keyframes rise {

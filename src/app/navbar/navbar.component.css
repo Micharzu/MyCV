@@ -1,12 +1,20 @@
-ul {
-  list-style-type: none;
-  margin: 0;
-  overflow: hidden;
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 15px;
+  min-height: 8vh;
+  /* overflow: hidden; */
   background-color: #323232;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 5;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -23,10 +31,25 @@ li a {
   font-family: "Lucida Sans", Arial, sans-serif;
 }
 
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 30px;
+  height: 3px;
+  background: rgb(241, 241, 241);
+  margin: 5px;
+}
+
 @media only screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    display: flex;
+  }
   li a {
-    padding: 1vh;
-    font-size: 0.9rem;
   }
 }
 

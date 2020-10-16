@@ -5,6 +5,28 @@
   overflow-y: scroll;
 }
 
+.main::after {
+  position: fixed;
+  top: 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+  z-index: -1;
+}
+
+.main.nav-active {
+  -ms-scroll-snap-type: none;
+      scroll-snap-type: none;
+}
+
+.main.nav-active::after {
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9;
+}
+
 .main .section {
   scroll-snap-align: center;
 }

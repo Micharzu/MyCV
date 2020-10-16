@@ -1,9 +1,17 @@
-<ul>
-    <li><a (click)="toSubmissions()">Opinie</a></li>
-    <li><a (click)="toContact()">Kontakt</a></li>
-    <li><a (click)="toHobbies()">Zainteresowania</a></li>
-    <li><a (click)="toSkills()">Umiejętności</a></li>
-    <li><a (click)="toAboutMe()">O Mnie</a></li>
-    <li><a (click)="toHeader()">Tytuł</a></li>
-    
-</ul>
+<div class="nav">
+  <div class="navbar" (click)="toggleNav()">
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li (click)="toHeader()"><a>Tytuł</a></li>
+    <li (click)="toAboutMe()"><a>O Mnie</a></li>
+    <li (click)="toSkills()"><a>Umiejętności</a></li>
+    <li (click)="toHobbies()"><a>Zainteresowania</a></li>
+    <li (click)="toContact()"><a>Kontakt</a></li>
+    <li (click)="toSubmissions()"><a>Opinie</a></li>
+  </ul>
+</div>
