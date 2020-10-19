@@ -27,10 +27,10 @@
 }
 
 .submissions.is-visible .submissions_content {
-  max-height: 100vh;
+  max-height: 200vh;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 600px) {
   .submissions_content {
     padding: 0 15px;
     display: -webkit-box;

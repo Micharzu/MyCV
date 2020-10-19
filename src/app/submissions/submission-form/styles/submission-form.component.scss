@@ -10,10 +10,10 @@ $formSlideDelay: $headerSlideDelay + 1s;
   .submission_form_header {
     position: relative;
     text-align: center;
-    padding: 7%;
+    padding: 6%;
     background-color: rgb(230, 219, 124);
     border: 3px solid rgba(44, 44, 44, 0.05);
-    top: 82vh;
+    top: 80vh;
   }
 
   @keyframes headerSlideOne {
@@ -26,11 +26,9 @@ $formSlideDelay: $headerSlideDelay + 1s;
   @keyframes headerSlideTwo {
     0% {
       margin-top: 0;
-      top: 0;
     }
     100% {
       margin-top: 7%;
-      top: 0;
     }
   }
 
@@ -121,6 +119,17 @@ $formSlideDelay: $headerSlideDelay + 1s;
   }
 }
 
+@media only screen and (min-width: 1100px) {
+  .submission_form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .submission_form_window {
+      margin: 3% 0;
+    }
+  }
+}
+
 .submission_form-container.initiated {
   .submission_form_header {
     animation: headerSlideOne $headerSlideTime ease-in $headerSlideDelay
@@ -129,7 +138,7 @@ $formSlideDelay: $headerSlideDelay + 1s;
         forwards;
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 599px) {
     .submission_form_header {
       padding: 3%;
       border-left: none;

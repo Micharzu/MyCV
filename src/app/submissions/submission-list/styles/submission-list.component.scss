@@ -7,7 +7,7 @@ $maxSubs: 3;
     position: relative;
 
     margin: 2vh;
-    padding: 20px;
+    padding: 15px 20px;
     background-color: rgba(235, 235, 235, 0.45);
     border: 3px solid rgba(44, 44, 44, 0.08);
     border-radius: 15px;
@@ -25,6 +25,19 @@ $maxSubs: 3;
       padding: 5px;
       border-radius: 10px;
       top: 85vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .submission_list {
+    padding: 10px;
+
+    .single_submission {
+      margin: 1vh;
+      padding: 5px;
+      border-radius: 10px;
+      top: 150vh;
     }
   }
 }

@@ -1,5 +1,5 @@
 $subs-container-height: 80vh;
-$smallSubsContainerHeight: 100vh;
+$smallSubsContainerHeight: 200vh;
 
 $subsSlidingTime: 1.4s;
 
@@ -35,7 +35,7 @@ $subsSlidingTime: 1.4s;
   }
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 600px) {
   .submissions_content {
     padding: 0 15px;
     display: flex;
