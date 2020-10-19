@@ -4,7 +4,11 @@
   </div>
 
   <div class="submission_form_window">
-    <form class="submission_form">
+    <form
+      class="submission_form"
+      [formGroup]="submissionForm"
+      (ngSubmit)="onSubmit()"
+    >
       <div class="submission_form_name">
         <label for="submission_form_name" class="submission_label"
           >Twój Podpis</label
@@ -13,6 +17,7 @@
           type="text"
           id="submission_form_name"
           class="form-control submission_form_input"
+          formControlName="username"
         />
       </div>
 
@@ -23,17 +28,12 @@
         <textarea
           id="submission_content"
           class="form-control submission_form_input"
+          formControlName="content"
         ></textarea>
       </div>
 
       <div class="submission_button_div">
-        <button
-          class="btn submission_button"
-          (click)="onSendForm()"
-          type="button"
-        >
-          Wyślij
-        </button>
+        <button class="btn submission_button">Wyślij</button>
       </div>
     </form>
   </div>
