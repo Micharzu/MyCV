@@ -9,6 +9,7 @@ export class NavbarComponent implements OnInit {
   constructor() {}
   mainContent: HTMLElement;
   navbar: HTMLElement;
+  navSliderBG: HTMLElement;
   navSlider: HTMLElement;
   navLinks: NodeListOf<HTMLElement>;
 
@@ -50,6 +51,7 @@ export class NavbarComponent implements OnInit {
 
   toggleNav() {
     this.navbar.classList.toggle("nav-active");
+    this.navSliderBG.classList.toggle("nav-active");
     this.navSlider.classList.toggle("nav-active");
     this.mainContent.classList.toggle("nav-active");
 
@@ -67,7 +69,9 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.mainContent = document.querySelector(".main");
     this.navbar = document.querySelector(".navbar");
+    this.navSliderBG = document.querySelector(".nav-links-bg");
     this.navSlider = document.querySelector(".nav-links");
+
     this.navLinks = document.querySelectorAll(".nav-links li");
   }
 }
