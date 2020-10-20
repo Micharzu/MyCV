@@ -5,10 +5,9 @@
   overflow-y: scroll;
 }
 
-.main::after {
+.main .nav-shadow {
   position: fixed;
   top: 0;
-  content: "";
   height: 100%;
   width: 100%;
   background: transparent;
@@ -22,7 +21,7 @@
       scroll-snap-type: none;
 }
 
-.main.nav-active::after {
+.main.nav-active .nav-shadow {
   background: rgba(0, 0, 0, 0.3);
   z-index: 9;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { NavService } from "./navbar.service";
 
 @Component({
   selector: "app-navbar",
@@ -6,12 +7,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./styles/navbar.component.css"],
 })
 export class NavbarComponent implements OnInit {
-  constructor() {}
-  mainContent: HTMLElement;
-  navbar: HTMLElement;
-  navSliderBG: HTMLElement;
-  navSlider: HTMLElement;
-  navLinks: NodeListOf<HTMLElement>;
+  constructor(private navService: NavService) {}
 
   toHeader() {
     document
@@ -50,28 +46,10 @@ export class NavbarComponent implements OnInit {
   }
 
   toggleNav() {
-    this.navbar.classList.toggle("nav-active");
-    this.navSliderBG.classList.toggle("nav-active");
-    this.navSlider.classList.toggle("nav-active");
-    this.mainContent.classList.toggle("nav-active");
-
-    this.navLinks.forEach((link, index) => {
-      if (link.style.animation.includes("navLinkFadeIn")) {
-        link.style.animation = "navLinkFadeOut 0.5s ease forwards";
-      } else {
-        link.style.animation = `navLinkFadeIn 0.5s ease forwards ${
-          index / 7 + 0.3
-        }s`;
-      }
-    });
+    this.navService.toggleNav();
   }
 
   ngOnInit() {
-    this.mainContent = document.querySelector(".main");
-    this.navbar = document.querySelector(".navbar");
-    this.navSliderBG = document.querySelector(".nav-links-bg");
-    this.navSlider = document.querySelector(".nav-links");
-
-    this.navLinks = document.querySelectorAll(".nav-links li");
+    this.navService.getElements();
   }
 }

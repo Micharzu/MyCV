@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
+import { NavService } from "./navbar/navbar.service";
 import { ShowComponentService } from "./show-component.service";
 
 @Component({
@@ -9,13 +10,22 @@ import { ShowComponentService } from "./show-component.service";
 export class AppComponent implements OnInit, OnDestroy {
   title = "MyCV";
 
-  constructor(private showCompService: ShowComponentService) {}
+  constructor(
+    private showCompService: ShowComponentService,
+    private navService: NavService
+  ) {}
+
+  toggleNav() {
+    this.navService.toggleNav();
+  }
 
   ngOnInit() {
     this.showCompService.sections = document.querySelectorAll("section");
     this.showCompService.sections.forEach((section) => {
       this.showCompService.observer.observe(section);
     });
+
+    this.navService.getElements();
   }
 
   ngOnDestroy() {}

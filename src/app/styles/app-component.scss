@@ -2,19 +2,20 @@
   scroll-snap-type: y proximity;
   height: 100vh;
   overflow-y: scroll;
-  &::after {
+
+  .nav-shadow {
     position: fixed;
     top: 0;
-    content: "";
     height: 100%;
     width: 100%;
     background: transparent;
     transition: 0.5s ease-in;
     z-index: -1;
   }
+
   &.nav-active {
     scroll-snap-type: none;
-    &::after {
+    .nav-shadow {
       background: rgba(0, 0, 0, 0.3);
       z-index: 9;
     }
