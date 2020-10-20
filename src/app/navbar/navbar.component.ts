@@ -18,25 +18,25 @@ export class NavbarComponent implements OnInit {
   toAboutMe() {
     document
       .getElementById("about-me-section")
-      .scrollIntoView({ behavior: "smooth" });
+      .scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
   toSkills() {
     document
       .getElementById("skills-section")
-      .scrollIntoView({ behavior: "smooth" });
+      .scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
   toHobbies() {
     document
       .getElementById("hobbies-section")
-      .scrollIntoView({ behavior: "smooth" });
+      .scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
   toContact() {
     document
       .getElementById("contact-section")
-      .scrollIntoView({ behavior: "smooth" });
+      .scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
   toSubmissions() {
